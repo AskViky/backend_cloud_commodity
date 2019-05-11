@@ -22,6 +22,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequestMapping("/user/v1/tokens")
 public class UserTokenController {
+
     @Autowired
     private UserService userService;
 
@@ -30,8 +31,8 @@ public class UserTokenController {
 
     @RequestMapping(method = RequestMethod.POST)
     public ResponseEntity<ResultModel> login(String userName, String passWord) {
-        System.out.println(userName);
-        System.out.println(passWord);
+        System.out.println("userName = "+userName);
+        System.out.println("passWord = "+passWord);
         if (null == userName || null == passWord) {
             return new ResponseEntity<ResultModel>(ResultModel.error(ResultStatus.DATA_NOT_NULL), HttpStatus.BAD_REQUEST);
         }

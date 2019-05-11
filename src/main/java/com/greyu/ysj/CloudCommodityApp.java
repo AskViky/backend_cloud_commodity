@@ -8,17 +8,15 @@ import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.web.support.SpringBootServletInitializer;
 
 @SpringBootApplication(exclude = PageHelperAutoConfiguration.class)
-//@SpringBootApplication
 @MapperScan("com.greyu.ysj.mapper")
-//public class BackendCloudCommodityApplication {
-public class BackendCloudCommodityApplication extends SpringBootServletInitializer {
+public class CloudCommodityApp extends SpringBootServletInitializer {
 
 	public static void main(String[] args) {
-		SpringApplication.run(BackendCloudCommodityApplication.class, args);
+		SpringApplication.run(CloudCommodityApp.class, args);
 	}
 
 	@Override
 	protected SpringApplicationBuilder configure(SpringApplicationBuilder builder) {
-	    return builder.sources(BackendCloudCommodityApplication.class);
+	    return builder.sources(CloudCommodityApp.class);
 	}
 }

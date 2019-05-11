@@ -12,7 +12,7 @@ import java.io.IOException;
  * @Date: Created in 22:28 2018/3/7.
  */
 @Component
-public class CrosFilter implements Filter{
+public class CrosFilter implements Filter {
     @Override
     public void init(FilterConfig filterConfig) throws ServletException {
 
